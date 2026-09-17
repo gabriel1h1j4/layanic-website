@@ -342,6 +342,111 @@
         .ai-feature { display: flex; gap: 16px; padding: 16px; border: 1px solid rgba(0,212,255,0.1); background: rgba(0,212,255,0.03); margin-bottom: 12px; transition: 0.3s; }
         .ai-feature:hover { border-color: var(--ai-blue); transform: translateX(5px); }
 
+        /* FOUNDER */
+        #founder { background: var(--bg); }
+        .founder-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .founder-photo-wrap {
+            position: relative;
+        }
+        .founder-photo-frame {
+            position: relative;
+            border: 1px solid rgba(201,168,76,0.3);
+            padding: 10px;
+            background: var(--surface);
+        }
+        .founder-photo-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+            filter: grayscale(15%) contrast(1.05);
+        }
+        .founder-photo-frame::before,
+        .founder-photo-frame::after {
+            content: '';
+            position: absolute;
+            width: 22px; height: 22px;
+            border: 1px solid var(--gold);
+        }
+        .founder-photo-frame::before { top: -6px; left: -6px; border-right: none; border-bottom: none; }
+        .founder-photo-frame::after { bottom: -6px; right: -6px; border-left: none; border-top: none; }
+        .founder-caption {
+            margin-top: 18px;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+        .founder-caption span {
+            display: block;
+            font-family: 'Rajdhani', sans-serif;
+            letter-spacing: 0.05em;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            text-transform: none;
+            margin-top: 4px;
+        }
+        .founder-content .section-label { color: var(--gold); }
+        .founder-name {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 60%, var(--ember) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .founder-role {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-bottom: 24px;
+        }
+        .founder-bio p { color: var(--text-dim); line-height: 1.9; margin-bottom: 18px; font-size: 1.05rem; }
+        .founder-bio strong { color: var(--text); font-weight: 600; }
+        .founder-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 24px 0 32px;
+        }
+        .founder-credentials .tag { }
+        .founder-projects {
+            list-style: none;
+            display: grid;
+            gap: 14px;
+        }
+        .founder-projects li {
+            padding: 16px 20px;
+            background: var(--surface);
+            border-left: 2px solid var(--gold-dim);
+            transition: 0.3s;
+        }
+        .founder-projects li:hover { border-left-color: var(--gold); background: #160f24; }
+        .founder-projects h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            font-size: 1rem;
+            letter-spacing: 0.03em;
+            margin-bottom: 4px;
+        }
+        .founder-projects p { color: var(--text-dim); font-size: 0.92rem; margin: 0; }
+
+        @media (max-width: 768px) {
+            .founder-inner { grid-template-columns: 1fr; }
+            .founder-photo-wrap { max-width: 320px; margin: 0 auto; }
+        }
+
         /* ABOUT & CONTACT */
         #about { background: var(--bg2); text-align: center; }
         .about-desc { font-size: 1.2rem; line-height: 2; color: var(--text-dim); max-width: 800px; margin: 0 auto 60px; }
@@ -374,6 +479,7 @@
   <ul class="nav-links">
     <li><a href="#game">Game</a></li>
     <li><a href="#ai">AI</a></li>
+    <li><a href="#founder">Founder</a></li>
     <li><a href="#about">Studio</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -460,6 +566,52 @@
     </div>
   </div>
 </section>
+
+<section id="founder">
+  <div class="founder-inner">
+    <div class="founder-photo-wrap reveal">
+      <div class="founder-photo-frame">
+        <img src="images/gabriel-founder.jpg" alt="Gabriel Indra Pandian, Founder of Layanic Studio">
+      </div>
+      <p class="founder-caption">Gabriel Indra Pandian<span>Founder &amp; Solo Developer</span></p>
+    </div>
+    <div class="founder-content reveal">
+      <div class="section-label">The Founder</div>
+      <h2 class="founder-name">Gabriel Indra Pandian</h2>
+      <p class="founder-role">Founder &amp; Solo Developer — Layanic Studio, Madurai, Tamil Nadu</p>
+      <div class="founder-bio">
+        <p>Self-taught developer since the age of nine, Gabriel builds every layer of Layanic's worlds himself — engine systems, AI pipelines, and narrative design alike. He is also trained in Bharatanatyam to a professional level, a discipline whose precision shows up directly in the motion and performance work behind Layanic's characters.</p>
+        <p>He holds an <strong>AI/ML certification affiliated with IIT Patna</strong>, and was nominated for the <strong>Kalam Medal for Individual Excellence (Translational Innovation)</strong> at The Next Gene Awards 2026, for the Ouroboros–Atom Theory — a configuration-based framework exploring bioelectric signaling in biological repair.</p>
+      </div>
+      <div class="founder-credentials">
+        <span class="tag">Self-Taught, Est. Age 9</span>
+        <span class="tag">Bharatanatyam Trained</span>
+        <span class="tag">AI/ML Certified — IIT Patna</span>
+        <span class="tag">Kalam Medal Nominee 2026</span>
+      </div>
+      <ul class="founder-projects">
+        <li>
+          <h4>Lamora Kingdom</h4>
+          <p>Open-world action RPG reimagining ancient Tamil/Lanka mythology, built solo in Unreal Engine 5.</p>
+        </li>
+        <li>
+          <h4>Cyrus</h4>
+          <p>Locally-run LLaMA 3-based AI assistant, powering culturally-aware NPC voices across Lamora Kingdom.</p>
+        </li>
+        <li>
+          <h4>Lemuria Kingdom</h4>
+          <p>Companion social platform extending Lamora's world and reputation systems beyond the game, currently in private beta.</p>
+        </li>
+        <li>
+          <h4>Layanic SmartPOS</h4>
+          <p>An all-in-one retail POS ecosystem concept — hardware, inventory, compliance and financial services for small merchants across India.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
 
 <section id="about">
     <h2 class="section-title">Built Different</h2>
